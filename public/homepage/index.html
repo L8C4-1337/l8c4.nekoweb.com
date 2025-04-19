@@ -10,12 +10,16 @@
 	<link rel="shortcut icon" href="../includes/images/favicon/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="180x180" href="../includes/images/favicon/apple-touch-icon.png" />
 	<link rel="manifest" href="../includes/images/favicon/site.webmanifest" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
 	<main>
 		<header>
 			<img src="../includes/images/favicon/icono.png">
-			<h3>L8C4</h3>
+			<h3>One could call this place home...</h3>
+			<h6>SYS STATUS: <span class="onlineText">ONLINE</span> <br> <span id = "currentDay">19/04/2025</span> <br> v0.0.1</h6>
 		</header>
 		<section>
 			<div class="sideBar">
@@ -36,28 +40,28 @@
 				</pre>
 				<div class="containerSection">
 					<div class="childBoxes">
-						<h1>ABOUT</h1>
+						<h2>About</h2>
 					</div>
 					<div class="childBoxes">
-						<h1>BLOG</h1>
+						<h2>Blog</h2>
 					</div>
 					<div class="childBoxes">
-						<h1>PROJECTS</h1>
+						<h2>Projects</h2>
 					</div>
 					<div class="childBoxes">
-						<h1>OPINIONS</h1>
+						<h2>Opinions</h2>
 					</div>
 					<div class="childBoxes">
-						<h1>GAMES</h1>
+						<h2>Games</h2>
+					</div>
+					<div class="childBoxes art">
+						<h2>Art</h2>
 					</div>
 					<div class="childBoxes">
-						<h1>ART</h1>
+						<h2>Resources</h2>
 					</div>
 					<div class="childBoxes">
-						<h1>RESOURCES</h1>
-					</div>
-					<div class="childBoxes">
-						<h1>RANDOM</h1>
+						<h2>Random</h2>
 					</div>
 				</div>
 			</div>
@@ -67,4 +71,9 @@
 		</footer>
 	</main>
 </body>
+
+<script type="text/javascript">
+	n = new Date();
+	document.getElementById('currentDay').innerHTML = n.getDate() + "/" + (n.getMonth() + 1) + "/" + n.getFullYear();
+</script>
 </html>
