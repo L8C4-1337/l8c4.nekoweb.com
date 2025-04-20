@@ -13,6 +13,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=VT323&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
 </head>
 <body>
 	<main>
@@ -23,6 +24,25 @@
 		</header>
 		<section>
 			<div class="sideBar">
+				<h5 class="mood">Mood: <a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-13ff00/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
+				<div style="padding: 20px;">
+					<div class="player">
+						<div class="marquee-text-track"><marquee scrollamount="4" class="title" id="song-title">Loading...</marquee></div>
+						<div class="progress" id="progress">
+							<div class="progress-filled" id="progress-filled"></div>
+						</div>
+						<div class="time">
+							<span id="current-time">0:00</span>
+							<span id="duration">0:00</span>
+						</div>
+						<div class="controls">
+							<button id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skip-back-icon lucide-skip-back"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" x2="5" y1="19" y2="5"/></svg></button>
+							<button id="play-pause"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><polygon points="6 3 20 12 6 21 6 3"/></svg></button>
+							<button id="next"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skip-forward-icon lucide-skip-forward"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" x2="19" y1="5" y2="19"/></svg></button>
+						</div>
+						<audio id="audio"></audio>
+					</div>	
+				</div>
 				
 			</div>
 			<div class="mainSite">
@@ -71,7 +91,7 @@
 		</footer>
 	</main>
 </body>
-
+<script src = "../includes/js/musicPlayer.js"></script>
 <script type="text/javascript">
 	n = new Date();
 	document.getElementById('currentDay').innerHTML = n.getDate() + "/" + (n.getMonth() + 1) + "/" + n.getFullYear();

@@ -118,7 +118,6 @@ header h3{
   letter-spacing: 2px;
 	font-size: 2rem;
 	animation: pulseGlow 3s infinite ease-in-out alternate;
-	z-index: 2;
 }
 
 .led-title {
@@ -153,6 +152,25 @@ header h6{
 section{
 	display: grid;
 	grid-template-columns: 25% 75%;
+	gap: 10px;
+}
+
+.sideBar{
+	margin-top: 10px;
+	background-color: black;
+	border: solid 2px #00ffff;
+	border-radius: 2px;
+}
+
+.mood{
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+}
+
+.mood img{
+	width: 6vw;
+	height: auto;
 }
 
 .mainSite img{
@@ -181,7 +199,6 @@ section{
 .containerSection{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
 	gap: 10px 10px;
 }
 
@@ -234,6 +251,76 @@ section{
 	text-shadow: 0 0 5px #000;
 }
 
+/*  Music Player   */
+
+    .player {
+      background-color: #000;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 20px;
+  box-sizing: border-box;
+      width: 100%;
+      box-shadow: 0 0 15px #000;
+    }
+    .marquee-text-track{
+      overflow: hidden;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      white-space: nowrap;
+    }
+    
+    .controls {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .progress {
+      width: 100%;
+      height: 5px;
+      background: #444;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .progress-filled {
+      height: 100%;
+      background: #ff69b4;
+      width: 0%;
+      transition: width 0.2s;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8em;
+      margin-bottom: 10px;
+    }
+
+    .volume {
+      width: 100%;
+    }
+
+    .controls button {
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background: #666;
+    }
+
+
+/* Music Player */
+
+
 
 @media (max-width: 992px){
 	section{
@@ -242,5 +329,17 @@ section{
 	}
 	.asciiText{
 		transform: translate(50%,-250%);
+	}
+	.containerSection{
+		grid-template-columns: 1fr;
+	}
+	.childBoxes h2{
+		font-size: 8vw;
+	}
+	header h3{
+		font-size: 4vw;
+	}
+	header h6{
+		font-size: 2vw;
 	}
 }
