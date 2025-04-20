@@ -32,7 +32,7 @@ const playlist = [
         url: "https://files.catbox.moe/9fr57u.mp3"
       },
       {
-        title: "Corridors - motijan [q.u.q.]]",
+        title: "Corridors - motijan [q.u.q.]",
         url: "https://files.catbox.moe/z0jgl9.mp3"
       },
       {

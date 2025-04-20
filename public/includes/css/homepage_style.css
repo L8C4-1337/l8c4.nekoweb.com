@@ -160,6 +160,7 @@ section{
 	background-color: black;
 	border: solid 2px #00ffff;
 	border-radius: 2px;
+	padding: 20px;
 }
 
 .mood{
@@ -249,6 +250,70 @@ section{
 	font-size: 4rem;
 	color: #fff;
 	text-shadow: 0 0 5px #000;
+}
+
+.currents{
+	border: 2px solid #0ff;
+	margin-top: 10px;
+}
+
+.currents h5{
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+}
+
+.marqueesImgs{
+	margin-top: 10px;
+	border: 2px solid #0ff;
+	display: flex;
+  	align-items: center;
+  	height: 4rem;
+  	overflow: hidden;
+}
+
+.marqueesImgs marquee {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.marqueesImgs img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 80%;
+  margin: 0 5px;
+}
+
+.socials{
+	margin-top: 10px;
+	border: 2px solid #0ff;
+	display: flex;
+  	align-items: center;
+  	justify-content: space-around;
+  	padding: 10px;
+  	flex-wrap: wrap
+}
+
+.socials h5{
+	margin: 0;
+	margin-bottom: 10px;
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+	flex-basis: 100%
+}
+
+.socials a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.socialsIcons{
+	height: 2rem;
+	width: 2rem;
 }
 
 /*  Music Player   */
