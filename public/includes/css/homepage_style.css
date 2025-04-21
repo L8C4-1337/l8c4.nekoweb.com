@@ -204,9 +204,10 @@ section{
 }
 
 .childBoxes{
+	position: relative;
 	border: solid 2px #00ffff;
 	border-radius: 2px;
-	background-color: black;
+	background-color: #111111;
 	height: 10vh;
 	color: #ff00ff;
 	display: flex;
@@ -217,15 +218,82 @@ section{
 	padding: 1rem;
 	text-shadow: 0 0 4px #ff00ff;
 	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+}
+
+.childBoxesBG{
+	position:absolute;
+	height: 500%;
+	width: 500%;
+	background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+	background-repeat: repeat;
+	animation: bg-animation .2s infinite;
+	opacity: .9;
+	visibility: visible;
+}
+
+.childBoxes h2{
+	z-index: 3;
+	pointer-events: none;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+.childBoxesBG:hover{
+	background: black;  /* fallback for old browsers */
+	background-image:  repeating-linear-gradient(0deg, rgba(0,131,176,0.5), rgba(0,180,219,0.5) 2px, black 2px, black);
+/*	background-image:  linear-gradient(rgba(0,131,176,0.5) 2px, transparent 2px), linear-gradient(to right, rgba(0,180,219,0.5) 2px, black 2px);*/
+	background-size: 10px 10px;
+	background-position: center;
+	color: white;
+	opacity: 1;
+}
+
+.childBoxesBGDown:hover{
+	animation: scrollGridBoxesDown 12s linear infinite;
+}
+
+.childBoxesBGUp:hover{
+	animation: scrollGridBoxesUp 12s linear infinite;
+}
+
+@keyframes scrollGridBoxesDown {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0px 360px; /* ajustá para velocidad/sensación */
+  }
+}
+
+@keyframes scrollGridBoxesUp {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0px -360px; /* ajustá para velocidad/sensación */
+  }
 }
 
 .childBoxes:hover{
-	 background-color: #111;
+	 background-color: black;
   border-color: #f0f;
   transform: scale(1.05);
-  box-shadow: 0 0 10px #0ff;
-  animation: glitch 0.3s infinite;
-  filter: none;
+  color: white;
+  opacity: 1;
+/*  animation: glitch 0.3s infinite;*/
 }
 
 @keyframes glitch {

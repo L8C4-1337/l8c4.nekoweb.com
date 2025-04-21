@@ -42,10 +42,14 @@ const playlist = [
       {
         title: "Lake Corridor - Kikiyama [Yume Nikki]",
         url: "https://files.catbox.moe/n242st.mp3"
+      },
+      {
+        title: "Not Alone - Etherane [Hello Charlotte]",
+        url: "https://files.catbox.moe/6vlz39.mp3"
       }
     ];
 
-    let currentIndex = Math.floor(Math.random() * 11);;
+    let currentIndex = Math.floor(Math.random() * 12);
     const audio = document.getElementById("audio");
     const title = document.getElementById("song-title");
     const playPause = document.getElementById("play-pause");
