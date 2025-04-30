@@ -149,6 +149,7 @@
 						<img loading="lazy" src="https://files.catbox.moe/ramuuq.jpg">
 						<img loading="lazy" src="https://files.catbox.moe/rzry60.jpg">
 						<img loading="lazy" src="https://files.catbox.moe/lu3j3f.jpg">
+						<img loading="lazy" src="https://litter.catbox.moe/1esrld.jpg">
 					</div>
 				</div>
 
@@ -244,10 +245,22 @@
 						fileCondition = true;
 						fileToUpload = file;
 					}
-
+					const RATE_LIMIT_MINUTES = 30;
+					const LAST_UPLOAD_KEY = "lastUploadTime";
 					uploadButton.addEventListener("click", function() {
-				      // Check if an image has been selected
-				      if (fileCondition) {
+						// Check client-side rate limit
+						const lastUpload = localStorage.getItem(LAST_UPLOAD_KEY);
+						if (lastUpload) {
+						  const elapsed = (Date.now() - parseInt(lastUpload, 10)) / 60000; // minutes
+						  if (elapsed < RATE_LIMIT_MINUTES) {
+						    alert(`You can upload again in ${Math.ceil(RATE_LIMIT_MINUTES - elapsed)} minutes.`);
+						    return;
+						  }
+						  else if(fileCondition){
+						  	uploadFile(fileToUpload);
+						  }
+						}
+				      else if (fileCondition) {
 				        uploadFile(fileToUpload);
 				        // Here, you can proceed with your upload logic, e.g., using FormData to send the file to a server
 				      } else {
@@ -281,6 +294,7 @@
 							    try {
 							      const response = JSON.parse(xhr.responseText);
 							      if (response.url && response.url.startsWith("https://")) {
+							      	localStorage.setItem(LAST_UPLOAD_KEY, Date.now().toString());
 							        appendTextToFile(response.url);
 							        filePathDisplay.textContent = "File uploaded correctly! Remember that it first needs to be validated by me!";
         							filePathDisplay.style.color = "#f2a2ff";
@@ -291,7 +305,24 @@
 							      alert("Upload failed: Invalid JSON response. Error: " + err);
 							    }
 							  } else {
-							    alert("Upload failed with status: " + xhr.status);
+							  	filePathDisplay.textContent = '';
+							    //alert("Upload failed with status: " + xhr.status);
+							    const response = JSON.parse(xhr.responseText);
+							      let message = "Upload failed.";
+
+							      if (xhr.status === 429) {
+							        message = "You can upload an image every 30 minutes.";
+							      } else if (xhr.status === 413) {
+							        message = "The file is too large. Max size is 10MB.";
+							      } else if (xhr.status === 415) {
+							        message = "Unsupported file type. Please upload PNG, JPG, or WEBP.";
+							      } else if (xhr.status === 400) {
+							        message = "Upload error: " + response.error;
+							      } else if (xhr.status === 500) {
+							        message = "Litterbox upload failed. Please try again later.";
+							      }
+
+							      alert(message);
 							  }
 							};
 

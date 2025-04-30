@@ -403,7 +403,7 @@ background-image: url('../images/showcase/milkInside.jpg');
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-animation: sizeUp 300s linear alternate infinite;
+animation: sizeUp 180s linear alternate infinite;
  /* background-color: #7c0000;  optional dark bg */
   	/*background-color: antiquewhite;*/
 }
