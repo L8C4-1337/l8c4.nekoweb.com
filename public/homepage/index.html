@@ -13,7 +13,6 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=VT323&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
 <script src="https://iframe.chat/scripts/main.min.js"></script>
 </head>
 <body>
@@ -58,7 +57,7 @@
 				</div>
 
 				<div class="chattable" id="chattableParent">
-					<div><iframe onload = "iframeloaded()" src='https://iframe.chat/embed?chat=29401207' width="100%" height="450" id='chattable' frameborder='none'></iframe>
+					<div><iframe src='https://iframe.chat/embed?chat=29401207' width="100%" height="450" id='chattable' frameborder='none'></iframe>
 					</div>
 					<script>
 					  chattable.initialize({
@@ -88,7 +87,7 @@
 				</div>
 				
 				<div class="marqueesImgs">
-					<marquee scrollamount="3" direction="right"><img src="../includes/marquees/aperturelogostamp.gif"><img src="../includes/marquees/greendaystamp.png"><img src="../includes/marquees/jack.gif"><img src="../includes/marquees/mcrstamp.png"><img src="../includes/marquees/mytruefriend.gif"><img src="../includes/marquees/portal.gif"><img src="../includes/marquees/portal2stamp2.png"><img src="../includes/marquees/skullz.jpg"><img src="../includes/marquees/soadstamp.jpg"><img src="../includes/marquees/thecakeisaliestamp2.jpg"><img src="../includes/marquees/wheatleyblinkie.gif"><a href="https://iframe.chat/"><img src="https://iframe.chat/chattable-alt.gif" title="Add a stream chat to your website free with Chattable" alt="Chattable" /></a></marquee>
+					<marquee scrollamount="3" direction="right"><img loading="lazy" src="../includes/marquees/aperturelogostamp.gif"><img loading="lazy" src="../includes/marquees/greendaystamp.png"><img loading="lazy" src="../includes/marquees/jack.gif"><imgloading="lazy" src="../includes/marquees/mcrstamp.png"><img loading="lazy" src="../includes/marquees/mytruefriend.gif"><img loading="lazy" src="../includes/marquees/portal.gif"><img loading="lazy" src="../includes/marquees/portal2stamp2.png"><img loading="lazy" src="../includes/marquees/skullz.jpg"><img loading="lazy" src="../includes/marquees/soadstamp.jpg"><img loading="lazy" src="../includes/marquees/thecakeisaliestamp2.jpg"><img loading="lazy" src="../includes/marquees/wheatleyblinkie.gif"><a target="_blank" rel="noopener noreferrer" href="https://iframe.chat/"><img loading="lazy" src="https://iframe.chat/chattable-alt.gif" title="Add a stream chat to your website free with Chattable" alt="Chattable" /></a></marquee>
 				</div>
 				
 			</div>
@@ -118,7 +117,7 @@
 						<div class="childBoxesBG childBoxesBGDown"></div>
 						<h2 class="glitch" data-text="Projects">Projects</h2>
 					</a>
-					<a href="https://l8c4.bearblog.dev/opinions" class="childBoxes">
+					<a href="https://l8c4.bearblog.dev/opinions" target="_blank" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Opinions">Opinions</h2>
 					</a>
@@ -140,17 +139,6 @@
 					</a>
 				</div>
 
-				<!--<div class="milkPics">
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/qn79n8.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/8prxgr.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/8prxgr.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/qn79n8.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/qn79n8.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/8prxgr.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/8prxgr.png"></div>
-					<div class="pics"><img loading="lazy" src="https://files.catbox.moe/qn79n8.png"></div>
-				</div>-->
-
 				<div class="milkPics">
 					<div class="pics">
 						<img loading="lazy" src="https://files.catbox.moe/qn79n8.png">
@@ -164,85 +152,154 @@
 					</div>
 				</div>
 
+				 <div class="upload-container" >
+				 	<div id="dropArea">
+					 	<p id = "clickableText">Drop your image here or click to select. Everything uploaded will be validated by me. By uploading you agree with the <a target="_blank" rel="noopener noreferrer" id = "clickableText" class="TOSCatbox" href="https://catbox.moe/legal.php">TOS of Catbox</a></p>
+					    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+					    <div class="preview" id="preview"></div>
+					    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
+					    <div class="file-path" id="filePathDisplay"></div>		    
+				 	</div>
+				 	  <button id="uploadButton" class="uploadButton"><span>Upload Image</span></button>
+				  </div>
+
 
 
 				<script type="text/javascript">
-					var uploaded = true;
-						function iframeloaded(){
-							if(uploaded){
-								const chattableParent = document.getElementById("chattableParent");
-								//Remove previous chat
-								console.log(chattableParent.childNodes[1]);
-								chattableParent.removeChild(chattableParent.childNodes[1]);
-								//Create temp chat for sending links
-								 var iframe = document.createElement("iframe");
-								  iframe.src = "https://iframe.chat/embed?chat=41638809";
-								  iframe.width = "100%";
-								  iframe.height = "450";
-								  iframe.id = "chattable";
-								  iframe.frameBorder = "0"; // or use iframe.setAttribute("frameborder", "0");
-								  var div = document.createElement("div");
-								  div.id = "chatParent"
-								  div.style.visibility = "hidden";
-								  chattableParent.appendChild(div);
-								  document.getElementById("chatParent").appendChild(iframe);
-									 //Send message
-								  var sent = false;
-								  while(!sent){
-								  	try{
-								  		setTimeout(() => {
-									  		console.log("2 Segundo esperados")
-									  		chattable.sendMessage("https://files.catbox.moe/lu3j3f.jpg", "[LINK]", "LinkSender", false);
-									  		console.log(chattableParent.childNodes);
-									  		setTimeout(() => {
-										  		chattableParent.removeChild(chattableParent.lastChild);
-										  		iframe = document.createElement("iframe");
-												iframe.src = "https://iframe.chat/embed?chat=29401207";
-												iframe.width = "100%";
-												iframe.height = "450";
-												iframe.id = "chattable";
-												iframe.frameBorder = "0"; // or use iframe.setAttribute("frameborder", "0");
-												div = document.createElement("div");
-												div.id = "chatParent"
-												chattableParent.appendChild(div);
-												document.getElementById("chatParent").appendChild(iframe);
-												setTimeout(() => {
-													chattable.reinitialize({
-												    stylesheet : "../includes/css/chattable.css"
-												 });
-												},1000);
-											}, 1000);
-									  		
-										}, 2000);
-								  		sent = true;
-								  		
-								  	}
-								  	catch{
-								  		{};
-								  	}
-								  }
-								  
-								 
-								// //Remove temp chat
-								// 
-								// //Create new chat
-								// iframe = document.createElement("iframe");
-								//   iframe.src = "https://iframe.chat/embed?chat=29401207";
-								//   iframe.width = "100%";
-								//   iframe.height = "450";
-								//   iframe.id = "chattable";
-								//   iframe.frameBorder = "0"; // or use iframe.setAttribute("frameborder", "0");
-								//   div = document.createElement("div");
-								//   div.id = "chatParent"
-								//   chattableParent.appendChild(div);
-								//   document.getElementById("chatParent").appendChild(iframe);
-							}
-	  						
-						};	
-						function tempLoaded(){
-							console.log("loadded");
-							chattable.sendMessage("https://files.catbox.moe/lu3j3f.jpg", "[LINK]", "LinkSender", false);
+
+					function appendTextToFile(text) {
+					    fetch('https://424241.xyz/appendLink.php', {
+					        method: 'POST',
+					        body: new URLSearchParams({
+					            'text': text
+					        })
+					    })
+					    .then(response => response.json())
+					    .then(data => {
+					        console.log(data.message);
+					    })
+					    .catch(error => {
+					        console.error('Error:', error);
+					    });
+					}
+
+					//appendTextToFile("https://files.catbox.moe/lu3j3f.jpg");
+
+					const dropArea = document.getElementById("dropArea");
+					const fileInput = document.getElementById("fileInput");
+					const preview = document.getElementById("preview");
+					const progressFill = document.getElementById("progressFill");
+					const filePathDisplay = document.getElementById("filePathDisplay");
+					const uploadButton = document.getElementById("uploadButton");
+					var fileCondition = false;
+					var percent = 0;
+					const clickableText = document.getElementById("clickableText");
+
+					const validTypes = ['image/png', 'image/jpeg', 'image/webp'];
+
+					clickableText.addEventListener("click", function(event) {
+				      event.stopPropagation();
+				    });
+
+				    filePathDisplay.addEventListener("click", function(event) {
+				      event.stopPropagation();
+				    });
+
+
+					dropArea.addEventListener("click", () => fileInput.click());
+
+					dropArea.addEventListener("dragover", (e) => {
+						e.preventDefault();
+						dropArea.classList.add("dragover");
+					});
+
+					dropArea.addEventListener("dragleave", () => {
+						dropArea.classList.remove("dragover");
+					});
+
+					dropArea.addEventListener("drop", (e) => {
+						fileCondition = false;
+						e.preventDefault();
+						dropArea.classList.remove("dragover");
+						handleFile(e.dataTransfer.files[0]);
+					});
+
+					fileInput.addEventListener("change", () => {
+						fileCondition = false
+						handleFile(fileInput.files[0]);
+					});
+
+					function handleFile(file) {
+						if (!validTypes.includes(file.type)) {
+							alert("Only PNG, JPG, JPEG, or WEBP files are allowed.");
+							return;
+						}
+
+						const reader = new FileReader();
+						reader.onload = (e) => {
+							preview.innerHTML = `<img src="${e.target.result}" alt="Preview"/>`;
 						};
+						reader.readAsDataURL(file);
+
+						fileCondition = true;
+						fileToUpload = file;
+					}
+
+					uploadButton.addEventListener("click", function() {
+				      // Check if an image has been selected
+				      if (fileCondition) {
+				        uploadFile(fileToUpload);
+				        // Here, you can proceed with your upload logic, e.g., using FormData to send the file to a server
+				      } else {
+				        console.log("No image selected!");
+				      }
+				    });
+
+					function uploadFile(file) {
+						progressFill.style.width = "0%"
+						percent = 0;
+						const xhr = new XMLHttpRequest();
+
+						const formData = new FormData();
+
+						  formData.append("reqtype", "fileupload");
+						  formData.append("time", "1h"); // You can change to 12h, 24h, etc.
+						  formData.append("file", file);
+
+      // Replace with your actual upload URL if needed
+						xhr.open("POST", "https://424241.xyz/litterbox-upload.php", true);
+
+						xhr.upload.addEventListener("progress", (e) => {
+							if (e.lengthComputable) {
+								percent = Math.round((e.loaded / e.total) * 100);
+								progressFill.style.width = percent + "%";
+							}
+						});
+
+						xhr.onload = function () {
+							  if (xhr.status === 200) {
+							    try {
+							      const response = JSON.parse(xhr.responseText);
+							      if (response.url && response.url.startsWith("https://")) {
+							        appendTextToFile(response.url);
+							        filePathDisplay.textContent = "File uploaded correctly! Remember that it first needs to be validated by me!";
+        							filePathDisplay.style.color = "#f2a2ff";
+							      } else {
+							        alert("Upload failed: " + xhr.responseText);
+							      }
+							    } catch (err) {
+							      alert("Upload failed: Invalid JSON response. Error: " + err);
+							    }
+							  } else {
+							    alert("Upload failed with status: " + xhr.status);
+							  }
+							};
+
+						xhr.onerror = function () {
+						    alert("Network error during upload.");
+						  };
+						xhr.send(formData);
+					}
 					
 				</script>
 
@@ -255,6 +312,16 @@
 </body>
 <script src = "../includes/js/musicPlayer.js"></script>
 <script type="text/javascript">
+
+	// SIDEBAR
+
+
+
+
+	// SIDEBAR
+
+
+
 	n = new Date();
 	document.getElementById('currentDay').innerHTML = n.getDate() + "/" + (n.getMonth() + 1) + "/" + n.getFullYear();
 

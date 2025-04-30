@@ -74,6 +74,10 @@ header{
 	padding: 0;
 	animation: glitchIn 1.2s ease-in-out;
 	font-family: 'Share Tech Mono', monospace;
+	position: sticky;
+	height: auto;
+	top: 0;
+	z-index: 10;
 }
 
 @keyframes glitchIn {
@@ -161,6 +165,9 @@ section{
 	border: solid 2px #00ffff;
 	border-radius: 2px;
 	padding: 20px;
+	position: sticky;
+	top: 0;
+	height: max-content;
 }
 
 .mood{
@@ -473,6 +480,139 @@ animation: sizeUp 300s linear alternate infinite;
 
 
 /*  Album      */
+
+
+/*    Drag and drop       */
+
+    .upload-container {
+    	margin-top: 10px;
+      border: 3px dashed #a100ff;
+      padding: 2rem;
+      max-width: 100%;
+      text-align: center;
+      background-color: #1b002e;
+      color: #f2a2ff;
+      position: relative;
+      transition: background 0.3s;
+    }
+
+    .upload-container.dragover {
+      background-color: #32054e;
+    }
+
+    .preview {
+    	height: 10rem;
+    	width: 10rem;
+    	margin: auto;
+      border: 2px solid #ff00ff;
+      background-color: #000;
+    }
+
+    .preview img {
+    	width: 100%;
+    	height: 100%;
+    	object-fit: contain;
+      border: 1px solid #ff1aff;
+    }
+
+    .TOSCatbox{
+    	color: #e230ff;
+    	text-decoration: underline;
+    }
+
+    .progress-bar {
+      margin-top: 1rem;
+      width: 100%;
+      height: 20px;
+      background-color: #400040;
+      border: 1px solid #ff00aa;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background-color: #ff00ff;
+      width: 0%;
+      transition: width 0.3s;
+    }
+
+    .file-path {
+      margin-top: 1rem;
+      color: #99ffea;
+      font-size: 0.9rem;
+    }
+
+    .grid-background {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background-image: linear-gradient(to right, #880088 1px, transparent 1px),
+                        linear-gradient(to top, #880088 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+
+      .uploadButton {
+      	margin-top: 1rem;
+       position: relative;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #f2a2ff;
+      background-color: transparent;
+      border: 2px solid #f2a2ff;
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .uploadButton:hover {
+      color: #1b002e;
+      background-color: #f2a2ff;
+      border-color: #f2a2ff;
+      box-shadow: 0 0 20px rgba(242, 162, 255, 0.7);
+    }
+
+    .uploadButton:hover::after {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border: 2px solid #f2a2ff;
+      border-radius: 8px;
+      animation: glowing-border 1.5s ease-in-out infinite;
+    }
+
+     @keyframes glowing-border {
+      0% {
+        box-shadow: 0 0 5px #f2a2ff, 0 0 10px #f2a2ff;
+      }
+      50% {
+        box-shadow: 0 0 20px #f2a2ff, 0 0 30px #f2a2ff;
+      }
+      100% {
+        box-shadow: 0 0 5px #f2a2ff, 0 0 10px #f2a2ff;
+      }
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .uploadButton {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+    }
+
+
+
+/*    Drag and drop       */
 
 .art{
 	background-image: url('../images/showcase/art.png');
