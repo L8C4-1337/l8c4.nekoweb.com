@@ -17,8 +17,8 @@ body::before {
   content: "";
   position: fixed;
   top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: repeating-linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.03) 0px,
@@ -34,8 +34,8 @@ body::before {
 body {
 	padding: 0;
 	margin: 0;
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100%;
+  width: 100%;
 	background-color: black;
 	background-image:  linear-gradient(rgba(137,0,184,0.5) 2px, transparent 2px), linear-gradient(to right, rgba(137,0,184,0.5) 2px, black 2px);
 	background-size: 30px 30px;
@@ -105,7 +105,7 @@ header{
   }
 }
 
-header img{
+header a img{
 	justify-self: flex-start;
 	width: 5rem;
 	height: auto;
@@ -156,11 +156,13 @@ header h6{
 section{
 	display: grid;
 	grid-template-columns: 25% 75%;
-	gap: 10px;
+/*	gap: 10px;*/
 }
 
 .sideBar{
-	margin-top: 10px;
+	margin-top: 1rem;
+	margin-right: 1rem;
+  margin-bottom: 1rem;
 	background-color: black;
 	border: solid 2px #00ffff;
 	border-radius: 2px;
@@ -179,6 +181,10 @@ section{
 .mood img{
 	width: 6vw;
 	height: auto;
+}
+
+.mainSite{
+  margin-bottom: 1rem;
 }
 
 .mainSite img{
@@ -484,6 +490,59 @@ animation: sizeUp 180s linear alternate infinite;
 
 /*    Drag and drop       */
 
+
+.upload-container h5{
+	color: #99ffea;
+	font-size: 1.5rem;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+	.collapsible {
+		margin: 0;
+  	  margin-top: 2rem;
+      position: relative;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #f2a2ff;
+      background-color: transparent;
+      border: 2px solid #f2a2ff;
+      border-radius: 8px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+}
+
+.active, .collapsible:hover {
+  	color: #1b002e;
+    background-color: #f2a2ff;
+    border-color: #f2a2ff;
+    box-shadow: 0 0 20px rgba(242, 162, 255, 0.7);
+    border: 2px solid #f2a2ff;
+      border-radius: 8px;
+}
+
+.collapsible:after {
+  content: '\002B';
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+/*.collapsible:hover{
+      border: 2px solid #f2a2ff;
+      border-radius: 8px;
+      animation: glowing-border 1.5s ease-in-out infinite;
+}*/
+
+.active:after {
+  content: "\2212";
+}
+
+
     .upload-container {
     	margin-top: 10px;
       border: 3px dashed #a100ff;
@@ -498,6 +557,12 @@ animation: sizeUp 180s linear alternate infinite;
 
     .upload-container.dragover {
       background-color: #32054e;
+    }
+
+    .collapsingBox{
+    	max-height: 0px;
+  		overflow: hidden;
+  		transition: max-height 0.2s ease-out;
     }
 
     .preview {
@@ -623,28 +688,35 @@ animation: sizeUp 180s linear alternate infinite;
 }
 
 .currents{
-	outline: 2px solid #0ff;
-	padding: 2px;
+	outline: 2px solid #08ffff;
+	padding: 0.7rem;
 	margin-top: 10px;
+  font-family: 'GohuFont', monospace;
 }
 
 .currents h5{
 	text-align: center;
-	color: white;
-	font-size: 1rem;
+	color: #a100ff;
+	font-size: 1.3rem;
+}
+
+.currents h5 span{
+  text-align: center;
+  color: #f2a2ff;
+  font-size: 1rem;
 }
 
 .thoughts{
-	outline: 2px solid #0ff;
+	outline: 2px solid #08ffff;
 	margin-top: 10px;
-	padding: 10px;
+	padding: 0.7rem;
 	text-align: center;
 }
 
 .thoughts h5{
 	text-align: center;
-	color: white;
-	font-size: 1rem;
+	color: #a100ff;
+  font-size: 1.3rem;
 	line-height: 0;
 }
 
@@ -652,8 +724,8 @@ animation: sizeUp 180s linear alternate infinite;
 	padding: 0;
 	margin: 0;
 	text-align: center;
-	color: white;
-	font-size: 1rem;
+	color: #f2a2ff;
+  font-size: 1rem;
 	text-decoration: none;
 	text-align: center;
 }
@@ -663,7 +735,7 @@ animation: sizeUp 180s linear alternate infinite;
 }
 
 .chattable{
-	outline: 2px solid #0ff;
+	outline: 2px solid #08ffff;
 	margin-top: 10px;
 	width: 100%;
 	height: 450px;
@@ -678,7 +750,7 @@ animation: sizeUp 180s linear alternate infinite;
 
 .marqueesImgs{
 	margin-top: 10px;
-	outline: 2px solid #0ff;
+	outline: 2px solid #08ffff;
 	padding: 2px;
 	display: flex;
   	align-items: center;
@@ -702,7 +774,7 @@ animation: sizeUp 180s linear alternate infinite;
 
 .socials{
 	margin-top: 10px;
-	outline: 2px solid #0ff;
+	outline: 2px solid #08ffff;
 	padding: 2px;
 	display: flex;
   	align-items: center;
@@ -799,6 +871,23 @@ animation: sizeUp 180s linear alternate infinite;
 
 
 /* Music Player */
+
+
+
+
+.guestbook{
+  margin-top: 1rem;
+  outline: 2px solid #08ffff;
+  border-radius: 3px;
+}
+
+
+@supports not selector(::-webkit-scrollbar) {
+  .milkPics {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
 
 
 

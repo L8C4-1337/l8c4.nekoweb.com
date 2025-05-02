@@ -18,7 +18,7 @@
 <body>
 	<main>
 		<header>
-			<img src="../includes/images/favicon/icono.png">
+			<a href="/homepage"><img src="../includes/images/favicon/icono.png"></a>
 			<h3>One could call this place home...</h3>
 			<h6>SYS STATUS: <span class="onlineText">ONLINE</span> <br> <span id = "currentDay">19/04/2025</span> <br> v0.0.1</h6>
 		</header>
@@ -43,15 +43,16 @@
 				</div>	
 
 				<div class="currents">
-					<h5 class="mood ">Mood: <br><a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-13ff00/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
-					<h5 class="">Currently watching: <br>Merlí</h5>
-					<h5 class="">Currently playing: <br>None</h5>
-					<h5 class="">Last game played: <br>Rocket League</h5>
-					<h5 class="">Song of the moment: <br>The Boy with the Thorn in His Side - The Smiths</h5>	
+					<h5 class="mood ">Mood: <br><a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-f2a2ff/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
+					<h5 id="currentlyListening">Currently listening to: <br><span>Loading...</span></h5>
+					<h5 class="">What I've been watching: <br><span>Merlí</span></h5>
+					<h5 class="">What I've been playing: <br><span>None</span></h5>
+					<h5 class="">Last game played: <br><span>Alicemare</span></h5>
+					<h5 class="">Song of the moment: <br><span>The Boy with the Thorn in His Side - The Smiths</span></h5>
 				</div>
 
 				<div class="thoughts">
-					<h5>Last thought</h4>
+					<h5>Last thought</h5>
 					<a href="thoughts"><b>"</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. <b>"</b></a>
 				</div>
@@ -85,9 +86,13 @@
 				<div class="increment">
 					<iframe src="https://incr.easrng.net/badge?key=l8c4" style="background: url(https://incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
 				</div>
+
+				<div>
+					<a style="position:fixed;z-index:1339; !important;top:55px;right:3px;" href="http://www.snazzyspace.com/generators/viewer-counter/" title="SnazzySpace.com Viewer Counter" target="_blank"><img src="http://www.snazzyspace.com/generators/viewer-counter/counter.php/fid=1746060948/style=6/counter.png" border="0"></a>
+				</div>
 				
 				<div class="marqueesImgs">
-					<marquee scrollamount="3" direction="right"><img loading="lazy" src="../includes/marquees/aperturelogostamp.gif"><img loading="lazy" src="../includes/marquees/greendaystamp.png"><img loading="lazy" src="../includes/marquees/jack.gif"><imgloading="lazy" src="../includes/marquees/mcrstamp.png"><img loading="lazy" src="../includes/marquees/mytruefriend.gif"><img loading="lazy" src="../includes/marquees/portal.gif"><img loading="lazy" src="../includes/marquees/portal2stamp2.png"><img loading="lazy" src="../includes/marquees/skullz.jpg"><img loading="lazy" src="../includes/marquees/soadstamp.jpg"><img loading="lazy" src="../includes/marquees/thecakeisaliestamp2.jpg"><img loading="lazy" src="../includes/marquees/wheatleyblinkie.gif"><a target="_blank" rel="noopener noreferrer" href="https://iframe.chat/"><img loading="lazy" src="https://iframe.chat/chattable-alt.gif" title="Add a stream chat to your website free with Chattable" alt="Chattable" /></a></marquee>
+					<marquee id="containerMarquees" scrollamount="3" direction="right"><img loading="lazy" src="../includes/marquees/aperturelogostamp.gif"><img loading="lazy" src="../includes/marquees/greendaystamp.png"><img loading="lazy" src="../includes/marquees/jack.gif"><img loading="lazy" src="../includes/marquees/mcrstamp.png"><img loading="lazy" src="../includes/marquees/mytruefriend.gif"><img loading="lazy" src="../includes/marquees/portal.gif"><img loading="lazy" src="../includes/marquees/portal2stamp2.png"><img loading="lazy" src="../includes/marquees/skullz.jpg"><img loading="lazy" src="../includes/marquees/soadstamp.jpg"><img loading="lazy" src="../includes/marquees/thecakeisaliestamp2.jpg"><img loading="lazy" src="../includes/marquees/wheatleyblinkie.gif"><a target="_blank" rel="noopener noreferrer" href="https://iframe.chat/"><img loading="lazy" src="https://iframe.chat/chattable-alt.gif" title="Add a stream chat to your website free with Chattable" alt="Chattable" ></a><img loading="lazy" src="../includes/marquees/1neo23.gif"><img loading="lazy" src="../includes/marquees/1neo27.gif"><img loading="lazy" src="../includes/marquees/lain.gif"><img loading="lazy" src="../includes/marquees/stamp4.webp"><a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a></marquee>
 				</div>
 				
 			</div>
@@ -109,7 +114,7 @@
 						<div class="childBoxesBG childBoxesBGDown"></div>
 						<h2 class="glitch" data-text="About">About</h2>
 					</a>
-					<a href="https://l8c4.bearblog.dev" target="_blank" class="childBoxes">
+					<a href="https://l8c4.bearblog.dev/" target="_blank" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Blog">Blog</h2>
 					</a>
@@ -121,9 +126,9 @@
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Opinions">Opinions</h2>
 					</a>
-					<a href="#" href="#" class="childBoxes">
+					<a href="https://l8c4.bearblog.dev/guides" target="_blank" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGDown"></div>
-						<h2 class="glitch" data-text="Games">Games</h2>
+						<h2 class="glitch" data-text="Guides">Guides</h2>
 					</a>
 					<a href="#" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
@@ -140,199 +145,42 @@
 				</div>
 
 				<div class="milkPics">
-					<div class="pics">
+					<div class="pics" id="galleryPics">
 						<img loading="lazy" src="https://files.catbox.moe/qn79n8.png">
 						<img loading="lazy" src="https://files.catbox.moe/8prxgr.png">
 						<img loading="lazy" src="https://files.catbox.moe/4m4esr.png">
 						<img loading="lazy" src="https://files.catbox.moe/6edodv.png">
 						<img loading="lazy" src="https://files.catbox.moe/9mzq4z.webp">
 						<img loading="lazy" src="https://files.catbox.moe/ramuuq.jpg">
+						<img loading="lazy" src="https://files.catbox.moe/mmg0xy.png">
 						<img loading="lazy" src="https://files.catbox.moe/rzry60.jpg">
 						<img loading="lazy" src="https://files.catbox.moe/lu3j3f.jpg">
-						<img loading="lazy" src="https://litter.catbox.moe/1esrld.jpg">
+						<img loading="lazy" src="https://files.catbox.moe/pomary.jpg">
+						<img loading="lazy" src="https://files.catbox.moe/g7gvpf.png">
+						<img loading="lazy" src="https://files.catbox.moe/yihuun.png">
+						<img loading="lazy" src="https://files.catbox.moe/ng09fr.png">
 					</div>
 				</div>
-
-				 <div class="upload-container" >
-				 	<div id="dropArea">
-					 	<p id = "clickableText">Drop your image here or click to select. Everything uploaded will be validated by me. By uploading you agree with the <a target="_blank" rel="noopener noreferrer" id = "clickableText" class="TOSCatbox" href="https://catbox.moe/legal.php">TOS of Catbox</a></p>
-					    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
-					    <div class="preview" id="preview"></div>
-					    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
-					    <div class="file-path" id="filePathDisplay"></div>		    
+				
+				 <div class="upload-container">
+				 	<h5>Want to upload something to the gallery?</h5>
+				 	<button class = "collapsible" id="collapsible">Open upload area</button>
+				 	<div class="collapsingBox">
+					 	<div id="dropArea">
+						 	<p id = "clickableText">Drop your image here or click to select. Everything uploaded will be validated by me. By uploading you agree with the <a target="_blank" rel="noopener noreferrer" id = "clickableText" class="TOSCatbox" href="https://catbox.moe/legal.php">TOS of Catbox</a></p>
+						    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
+						    <div class="preview" id="preview"></div>
+						    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
+						    <div class="file-path" id="filePathDisplay"></div>		    
+					 	</div>
+					 	  <button id="uploadButton" class="uploadButton"><span>Upload Image</span></button>	
 				 	</div>
-				 	  <button id="uploadButton" class="uploadButton"><span>Upload Image</span></button>
+				 	
 				  </div>
 
-
-
-				<script type="text/javascript">
-
-					function appendTextToFile(text) {
-					    fetch('https://424241.xyz/appendLink.php', {
-					        method: 'POST',
-					        body: new URLSearchParams({
-					            'text': text
-					        })
-					    })
-					    .then(response => response.json())
-					    .then(data => {
-					        console.log(data.message);
-					    })
-					    .catch(error => {
-					        console.error('Error:', error);
-					    });
-					}
-
-					//appendTextToFile("https://files.catbox.moe/lu3j3f.jpg");
-
-					const dropArea = document.getElementById("dropArea");
-					const fileInput = document.getElementById("fileInput");
-					const preview = document.getElementById("preview");
-					const progressFill = document.getElementById("progressFill");
-					const filePathDisplay = document.getElementById("filePathDisplay");
-					const uploadButton = document.getElementById("uploadButton");
-					var fileCondition = false;
-					var percent = 0;
-					const clickableText = document.getElementById("clickableText");
-
-					const validTypes = ['image/png', 'image/jpeg', 'image/webp'];
-
-					clickableText.addEventListener("click", function(event) {
-				      event.stopPropagation();
-				    });
-
-				    filePathDisplay.addEventListener("click", function(event) {
-				      event.stopPropagation();
-				    });
-
-
-					dropArea.addEventListener("click", () => fileInput.click());
-
-					dropArea.addEventListener("dragover", (e) => {
-						e.preventDefault();
-						dropArea.classList.add("dragover");
-					});
-
-					dropArea.addEventListener("dragleave", () => {
-						dropArea.classList.remove("dragover");
-					});
-
-					dropArea.addEventListener("drop", (e) => {
-						fileCondition = false;
-						e.preventDefault();
-						dropArea.classList.remove("dragover");
-						handleFile(e.dataTransfer.files[0]);
-					});
-
-					fileInput.addEventListener("change", () => {
-						fileCondition = false
-						handleFile(fileInput.files[0]);
-					});
-
-					function handleFile(file) {
-						if (!validTypes.includes(file.type)) {
-							alert("Only PNG, JPG, JPEG, or WEBP files are allowed.");
-							return;
-						}
-
-						const reader = new FileReader();
-						reader.onload = (e) => {
-							preview.innerHTML = `<img src="${e.target.result}" alt="Preview"/>`;
-						};
-						reader.readAsDataURL(file);
-
-						fileCondition = true;
-						fileToUpload = file;
-					}
-					const RATE_LIMIT_MINUTES = 30;
-					const LAST_UPLOAD_KEY = "lastUploadTime";
-					uploadButton.addEventListener("click", function() {
-						// Check client-side rate limit
-						const lastUpload = localStorage.getItem(LAST_UPLOAD_KEY);
-						if (lastUpload) {
-						  const elapsed = (Date.now() - parseInt(lastUpload, 10)) / 60000; // minutes
-						  if (elapsed < RATE_LIMIT_MINUTES) {
-						    alert(`You can upload again in ${Math.ceil(RATE_LIMIT_MINUTES - elapsed)} minutes.`);
-						    return;
-						  }
-						  else if(fileCondition){
-						  	uploadFile(fileToUpload);
-						  }
-						}
-				      else if (fileCondition) {
-				        uploadFile(fileToUpload);
-				        // Here, you can proceed with your upload logic, e.g., using FormData to send the file to a server
-				      } else {
-				        console.log("No image selected!");
-				      }
-				    });
-
-					function uploadFile(file) {
-						progressFill.style.width = "0%"
-						percent = 0;
-						const xhr = new XMLHttpRequest();
-
-						const formData = new FormData();
-
-						  formData.append("reqtype", "fileupload");
-						  formData.append("time", "1h"); // You can change to 12h, 24h, etc.
-						  formData.append("file", file);
-
-      // Replace with your actual upload URL if needed
-						xhr.open("POST", "https://424241.xyz/litterbox-upload.php", true);
-
-						xhr.upload.addEventListener("progress", (e) => {
-							if (e.lengthComputable) {
-								percent = Math.round((e.loaded / e.total) * 100);
-								progressFill.style.width = percent + "%";
-							}
-						});
-
-						xhr.onload = function () {
-							  if (xhr.status === 200) {
-							    try {
-							      const response = JSON.parse(xhr.responseText);
-							      if (response.url && response.url.startsWith("https://")) {
-							      	localStorage.setItem(LAST_UPLOAD_KEY, Date.now().toString());
-							        appendTextToFile(response.url);
-							        filePathDisplay.textContent = "File uploaded correctly! Remember that it first needs to be validated by me!";
-        							filePathDisplay.style.color = "#f2a2ff";
-							      } else {
-							        alert("Upload failed: " + xhr.responseText);
-							      }
-							    } catch (err) {
-							      alert("Upload failed: Invalid JSON response. Error: " + err);
-							    }
-							  } else {
-							  	filePathDisplay.textContent = '';
-							    //alert("Upload failed with status: " + xhr.status);
-							    const response = JSON.parse(xhr.responseText);
-							      let message = "Upload failed.";
-
-							      if (xhr.status === 429) {
-							        message = "You can upload an image every 30 minutes.";
-							      } else if (xhr.status === 413) {
-							        message = "The file is too large. Max size is 10MB.";
-							      } else if (xhr.status === 415) {
-							        message = "Unsupported file type. Please upload PNG, JPG, or WEBP.";
-							      } else if (xhr.status === 400) {
-							        message = "Upload error: " + response.error;
-							      } else if (xhr.status === 500) {
-							        message = "Litterbox upload failed. Please try again later.";
-							      }
-
-							      alert(message);
-							  }
-							};
-
-						xhr.onerror = function () {
-						    alert("Network error during upload.");
-						  };
-						xhr.send(formData);
-					}
-					
-				</script>
+				  <div class="guestbook">
+				  	<iframe src="https://l8c4.atabook.org/" width="100%" height="450" frameborder='none'></iframe>
+				  </div>
 
 			</div>
 		</section>
@@ -342,21 +190,38 @@
 	</main>
 </body>
 <script src = "../includes/js/musicPlayer.js"></script>
+<script src = "../includes/js/uploadImage.js"></script>
 <script type="text/javascript">
 
-	// SIDEBAR
+	// Shuffle order of inserted stufff
 
+  function shuffleElements(container) {
+    var elements = container.children;
+    for (var i = elements.length; i >= 0; i--) {
+      container.appendChild(elements[Math.random() * i | 0]);
+    }
+  }
 
-
-
-	// SIDEBAR
-
-
+  	// Write current date to header
 
 	n = new Date();
 	document.getElementById('currentDay').innerHTML = n.getDate() + "/" + (n.getMonth() + 1) + "/" + n.getFullYear();
 
+	
+
 	document.addEventListener("DOMContentLoaded", () => {
+
+	//Shuffle pics
+	var containerPics = document.getElementById('galleryPics');
+    shuffleElements(containerPics);
+
+    // Shuffle marquees
+
+    var containerMarquees = document.getElementById('containerMarquees');
+    shuffleElements(containerMarquees);
+
+
+    // Add animation to pics
     const images = document.querySelectorAll(".pics img");
     images.forEach((img, index) => {
       img.style.animationDelay = `${index * 100}ms`;
@@ -364,6 +229,61 @@
     });
   });
 
+
+	// Collapsible for uploading imgs
+
+	var coll = document.getElementById("collapsible");
+
+	coll.addEventListener("click",function(){
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+      		content.style.maxHeight = null;
+    	} else {
+      		content.style.maxHeight = content.scrollHeight + "px";
+    	}
+	});
+
+	function updateCurrentlyListening(){
+		fetch('https://424241.xyz/getNowPlaying.php')
+	  .then(response => response.json())
+	  .then(data => {
+	    const element = document.getElementById('currentlyListening');
+	    if (data === -1) {
+	      element.innerHTML = "Currently listening to: <br><span>Nothing</span>";
+	    } else {
+	      element.innerHTML = `Currently listening to: <br><span>${data.title} - ${data.artist}</span>`;
+	    }
+	  })
+	  .catch(error => {
+	    console.error("Error fetching now playing info:", error);
+	  });	
+	}
+
+	updateCurrentlyListening();
+
+function scheduleSyncedUpdates() {
+    const now = new Date();
+    const seconds = now.getSeconds();
+    const milliseconds = now.getMilliseconds();
+    
+    let msToNextCall;
+
+    if (seconds < 5) {
+        msToNextCall = (5 - seconds) * 1000 - milliseconds;
+    } else {
+        msToNextCall = ((60 - seconds + 5) * 1000) - milliseconds;
+    }
+
+    setTimeout(() => {
+        updateCurrentlyListening();
+
+        // Then call it every 60 seconds from that point on
+        setInterval(updateCurrentlyListening, 60 * 1000);
+    }, msToNextCall);
+}
+
+	scheduleSyncedUpdates();
 
 </script>
 </html>
