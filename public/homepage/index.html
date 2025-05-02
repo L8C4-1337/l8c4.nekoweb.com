@@ -10,9 +10,6 @@
 	<link rel="shortcut icon" href="../includes/images/favicon/favicon.ico" />
 	<link rel="apple-touch-icon" sizes="180x180" href="../includes/images/favicon/apple-touch-icon.png" />
 	<link rel="manifest" href="../includes/images/favicon/site.webmanifest" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=VT323&display=swap" rel="stylesheet">
 <script src="https://iframe.chat/scripts/main.min.js"></script>
 </head>
 <body>
@@ -86,6 +83,7 @@
 
 				<div class="increment">
 					<iframe src="https://incr.easrng.net/badge?key=l8c4" style="background: url(https://incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+					
 				</div>
 
 				<div>
@@ -93,7 +91,7 @@
 				</div>
 				
 				<div class="marqueesImgs">
-					<marquee id="containerMarquees" scrollamount="3" direction="right"><img loading="lazy" src="../includes/marquees/aperturelogostamp.gif"><img loading="lazy" src="../includes/marquees/greendaystamp.png"><img loading="lazy" src="../includes/marquees/jack.gif"><img loading="lazy" src="../includes/marquees/mcrstamp.png"><img loading="lazy" src="../includes/marquees/mytruefriend.gif"><img loading="lazy" src="../includes/marquees/portal.gif"><img loading="lazy" src="../includes/marquees/portal2stamp2.png"><img loading="lazy" src="../includes/marquees/skullz.jpg"><img loading="lazy" src="../includes/marquees/soadstamp.jpg"><img loading="lazy" src="../includes/marquees/thecakeisaliestamp2.jpg"><img loading="lazy" src="../includes/marquees/wheatleyblinkie.gif"><a target="_blank" rel="noopener noreferrer" href="https://iframe.chat/"><img loading="lazy" src="https://iframe.chat/chattable-alt.gif" title="Add a stream chat to your website free with Chattable" alt="Chattable" ></a><img loading="lazy" src="../includes/marquees/1neo23.gif"><img loading="lazy" src="../includes/marquees/1neo27.gif"><img loading="lazy" src="../includes/marquees/lain.gif"><img loading="lazy" src="../includes/marquees/stamp4.webp"><a href="https://status.cafe"><img src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a></marquee>
+					<marquee id="containerMarquees" scrollamount="3" direction="right"><img loading="lazy" src="../includes/marquees/aperturelogostamp.gif"><img loading="lazy" src="../includes/marquees/greendaystamp.png"><img loading="lazy" src="../includes/marquees/jack.gif"><img loading="lazy" src="../includes/marquees/mcrstamp.png"><img loading="lazy" src="../includes/marquees/mytruefriend.gif"><img loading="lazy" src="../includes/marquees/portal.gif"><img loading="lazy" src="../includes/marquees/portal2stamp2.png"><img loading="lazy" src="../includes/marquees/skullz.jpg"><img loading="lazy" src="../includes/marquees/soadstamp.jpg"><img loading="lazy" src="../includes/marquees/thecakeisaliestamp2.jpg"><img loading="lazy" src="../includes/marquees/wheatleyblinkie.gif"><a target="_blank" rel="noopener noreferrer" href="https://iframe.chat/"><img loading="lazy" src="https://iframe.chat/chattable-alt.gif" title="Add a stream chat to your website free with Chattable" alt="Chattable" ></a><img loading="lazy" src="../includes/marquees/1neo23.gif"><img loading="lazy" src="../includes/marquees/1neo27.gif"><img loading="lazy" src="../includes/marquees/lain.gif"><img loading="lazy" src="../includes/marquees/stamp4.webp"><a href="https://status.cafe"><img loading="lazy" src="https://status.cafe/assets/button.png" alt="Status Cafe"/></a><img loading ="lazy" src="../includes/marquees/error.gif"><img loading ="lazy" src="../includes/marquees/yotsuba1.jpg"><img loading ="lazy" src="../includes/marquees/yotsuba2.jpg"><img loading ="lazy" src="../includes/marquees/yotsuba3.gif"><img loading ="lazy" src="../includes/marquees/gorillaz.gif"></marquee>
 				</div>
 				
 			</div>
@@ -168,7 +166,7 @@
 				 	<button class = "collapsible" id="collapsible">Open upload area</button>
 				 	<div class="collapsingBox">
 					 	<div id="dropArea">
-						 	<p id = "clickableText">Drop your image here or click to select. Everything uploaded will be validated by me. By uploading you agree with the <a target="_blank" rel="noopener noreferrer" id = "clickableText" class="TOSCatbox" href="https://catbox.moe/legal.php">TOS of Catbox</a></p>
+						 	<p id = "clickableText">Drop your image here or click to select. Everything uploaded will be validated by me. By uploading you agree with the <a target="_blank" rel="noopener noreferrer" id = "clickableText" class="TOSCatbox" href="https://catbox.moe/legal.php">TOS of Catbox.</a></p>
 						    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
 						    <div class="preview" id="preview"></div>
 						    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
@@ -244,6 +242,8 @@
       		content.style.maxHeight = content.scrollHeight + "px";
     	}
 	});
+
+	// get currently song being listened
 
 	function updateCurrentlyListening(){
 		fetch('https://424241.xyz/getNowPlaying.php')

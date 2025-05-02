@@ -83,7 +83,7 @@ header{
 	border-style: solid;
 	padding: 0;
 	animation: glitchIn 1.2s ease-in-out;
-	font-family: 'Share Tech Mono', monospace;
+	font-family: 'GohuFont', monospace;
 	position: sticky;
 	height: auto;
 	top: 0;
@@ -157,6 +157,7 @@ header h6{
 	font-size: 0.8rem;
 	text-shadow: 0 0 3px #0ff;
   	opacity: 0.8;
+    font-family: 'GohuFont', monospace;
 }
 
 .onlineText{
@@ -524,6 +525,7 @@ animation: sizeUp 180s linear alternate infinite;
       cursor: pointer;
       overflow: hidden;
       transition: all 0.3s ease;
+      font-family: 'GohuFont', monospace;
 }
 
 .active, .collapsible:hover {
@@ -563,6 +565,7 @@ animation: sizeUp 180s linear alternate infinite;
       color: #f2a2ff;
       position: relative;
       transition: background 0.3s;
+      font-family: 'GohuFont', monospace;
     }
 
     .upload-container.dragover {
@@ -643,6 +646,7 @@ animation: sizeUp 180s linear alternate infinite;
       cursor: pointer;
       overflow: hidden;
       transition: all 0.3s ease;
+      font-family: 'GohuFont', monospace;
     }
 
     /* Hover effect */
@@ -721,6 +725,7 @@ animation: sizeUp 180s linear alternate infinite;
 	margin-top: 10px;
 	padding: 0.8rem;
 	text-align: center;
+  font-family: 'GohuFont', monospace;
 }
 
 .thoughts h5{
@@ -790,7 +795,8 @@ animation: sizeUp 180s linear alternate infinite;
   	align-items: center;
   	justify-content: space-around;
   	padding: 10px;
-  	flex-wrap: wrap
+  	flex-wrap: wrap;
+    font-family: 'GohuFont', monospace;
 }
 
 .socials h5{
@@ -823,6 +829,7 @@ animation: sizeUp 180s linear alternate infinite;
   box-sizing: border-box;
       width: 100%;
       box-shadow: 0 0 15px #000;
+      font-family: 'GohuFont', monospace;
     }
     .marquee-text-track{
       overflow: hidden;
