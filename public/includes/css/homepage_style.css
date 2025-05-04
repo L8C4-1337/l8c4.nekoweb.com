@@ -749,6 +749,33 @@ animation: sizeUp 180s linear alternate infinite;
 	font-size: 1.5rem;
 }
 
+#statuscafe {
+    background-color: transparent;
+    border: 1px solid midnightblue;
+    outline: 2px solid #08ffff;
+  margin-top: 10px;
+  padding: 0.8rem;
+  text-align: center;
+  font-family: 'GohuFont', monospace;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+    color: #a100ff;
+}
+
+#statuscafe-username a{
+  font-size: 1.3rem;
+  color: #a100ff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+    color: #f2a2ff;
+    font-weight: 1000;
+}
+
 .chattable{
 	outline: 2px solid #08ffff;
 	margin-top: 10px;
