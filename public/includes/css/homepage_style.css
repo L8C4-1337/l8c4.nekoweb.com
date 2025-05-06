@@ -1,6 +1,8 @@
+/*      Template for sites                  */
+
 @font-face{
-	font-family: GohuFont;
-	src: url('../fonts/GohuFontuni14NerdFontMono-Regular.ttf');
+  font-family: GohuFont;
+  src: url('../fonts/GohuFontuni14NerdFontMono-Regular.ttf');
 }
 
 @font-face{
@@ -52,6 +54,35 @@ body {
   }
 }
 
+
+
+body {
+  --sb-track-color: #a100ff;
+  --sb-thumb-color: #00ffff;
+  --sb-size: 6px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
 .screenShadow{
   position: fixed;
   top: 0;
@@ -64,30 +95,28 @@ body {
 }
 
 
-main{
-	max-width: 72%;
-	margin-left: auto;
-	margin-right: auto; 
-	display: block;
-}
+/*      Template for sites ends                        */
+
+
+/*     HEADER                  */
 
 header{
-	width: 100%;
-	background-color: #000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid #00ffff;
-	border-radius: 5px;
-	border-color: #00e7e7;
-	border-style: solid;
-	padding: 0;
-	animation: glitchIn 1.2s ease-in-out;
-	font-family: 'GohuFont', monospace;
-	position: sticky;
-	height: auto;
-	top: 0;
-	z-index: 10;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00ffff;
+  border-radius: 5px;
+  border-color: #00e7e7;
+  border-style: solid;
+  padding: 0;
+  animation: glitchIn 1.2s ease-in-out;
+  font-family: 'GohuFont', monospace;
+  position: sticky;
+  height: auto;
+  top: 0;
+  z-index: 10;
 }
 
 @keyframes glitchIn {
@@ -116,22 +145,22 @@ header{
 }
 
 header a img{
-	justify-self: flex-start;
-	width: 5rem;
-	height: auto;
+  justify-self: flex-start;
+  width: 5rem;
+  height: auto;
 }
 
 header h3{
-	margin: 0 auto;
-  	text-align: center;
-	color: #00ffcc;
+  margin: 0 auto;
+    text-align: center;
+  color: #00ffcc;
   text-shadow:
     0 0 5px #00ffcc,
     0 0 10px #00ffcc,
     0 0 20px #00ffcc;
   letter-spacing: 2px;
-	font-size: 2rem;
-	animation: pulseGlow 3s infinite ease-in-out alternate;
+  font-size: 2rem;
+  animation: pulseGlow 3s infinite ease-in-out alternate;
 }
 
 .led-title {
@@ -149,49 +178,290 @@ header h3{
 
 
 header h6{
-	margin: 0;
-	margin-right: 10px;
-	color: #0ff;
-	text-align: center;
-/*	text-shadow: 0 0 5px #00e735;*/
-	font-size: 0.8rem;
-	text-shadow: 0 0 3px #0ff;
-  	opacity: 0.8;
+  margin: 0;
+  margin-right: 10px;
+  color: #0ff;
+  text-align: center;
+/*  text-shadow: 0 0 5px #00e735;*/
+  font-size: 0.8rem;
+  text-shadow: 0 0 3px #0ff;
+    opacity: 0.8;
     font-family: 'GohuFont', monospace;
 }
 
 .onlineText{
-	color: #13ff00;
+  color: #13ff00;
+}
+
+@media (max-width: 992px){
+  header h3{
+    font-size: 4vw;
+  }
+  header h6{
+    font-size: 2vw;
+  }
+}
+
+
+/*   HEADER ENDS                          */
+
+
+
+/* SIDE BAR */
+
+.sideBar{
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: black;
+  border: solid 2px #00ffff;
+  border-radius: 6px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: max-content;
+  overflow-y: auto;
+}
+
+.sideBar {
+  --sb-track-color: #a100ff;
+  --sb-thumb-color: #00ffff;
+  --sb-size: 5px;
+}
+
+.sideBar::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.sideBar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+.sideBar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .sideBar {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+.mood{
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+}
+
+.mood img{
+  width: 6vw;
+  height: auto;
+}
+
+.currents{
+  outline: 2px solid #08ffff;
+  padding: 0.8rem;
+  margin-top: 10px;
+  font-family: 'GohuFont', monospace;
+}
+
+.currents h5{
+  text-align: center;
+  color: #a100ff;
+  font-size: 1.3rem;
+}
+
+.currents h5 span{
+  text-align: center;
+  color: #f2a2ff;
+  font-size: 1rem;
+}
+
+#statuscafe {
+    background-color: transparent;
+    border: 1px solid midnightblue;
+    outline: 2px solid #08ffff;
+  margin-top: 10px;
+  padding: 0.8rem;
+  text-align: center;
+  font-family: 'GohuFont', monospace;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+    color: #a100ff;
+}
+
+#statuscafe-username a{
+  font-size: 1.3rem;
+  color: #a100ff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+    color: #f2a2ff;
+    font-weight: 1000;
+}
+
+.chattable{
+  outline: 2px solid #08ffff;
+  margin-top: 10px;
+  width: 100%;
+  height: 450px;
+}
+
+.increment{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marqueesImgs{
+  margin-top: 10px;
+  outline: 2px solid #08ffff;
+  padding: 2px;
+  display: flex;
+    align-items: center;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.marqueesImgs marquee {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.marqueesImgs img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 80%;
+  margin: 0 5px;
+}
+
+.socials{
+  margin-top: 10px;
+  outline: 2px solid #08ffff;
+  padding: 2px;
+  display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+    font-family: 'GohuFont', monospace;
+}
+
+.socials h5{
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  flex-basis: 100%
+}
+
+.socials a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.socialsIcons{
+  height: 2rem;
+  width: 2rem;
+}
+
+
+/*  Music Player   */
+
+    .player {
+      background-color: #000;
+  outline: 2px solid #0ff;
+  color: #0ff;
+  padding: 20px;
+  box-sizing: border-box;
+      width: 100%;
+      box-shadow: 0 0 15px #000;
+      font-family: 'GohuFont', monospace;
+    }
+    .marquee-text-track{
+      overflow: hidden;
+    }
+
+    .title {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      white-space: nowrap;
+    }
+    
+    .controls {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .progress {
+      width: 100%;
+      height: 5px;
+      background: #444;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .progress-filled {
+      height: 100%;
+      background: #ff69b4;
+      width: 0%;
+      transition: width 0.2s;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8em;
+      margin-bottom: 10px;
+    }
+
+    .volume {
+      width: 100%;
+    }
+
+    .controls button {
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background: #666;
+    }
+
+
+/* Music Player */
+
+
+/*   SIDEBAR ENDS            */
+
+main{
+	max-width: 72%;
+	margin-left: auto;
+	margin-right: auto; 
+	display: block;
 }
 
 section{
 	display: grid;
 	grid-template-columns: 25% 75%;
 /*	gap: 10px;*/
-}
-
-.sideBar{
-	margin-top: 1rem;
-	margin-right: 1rem;
-  margin-bottom: 1rem;
-	background-color: black;
-	border: solid 2px #00ffff;
-	border-radius: 2px;
-	padding: 20px;
-	position: sticky;
-	top: 0;
-	height: max-content;
-}
-
-.mood{
-	text-align: center;
-	color: white;
-	font-size: 1rem;
-}
-
-.mood img{
-	width: 6vw;
-	height: auto;
 }
 
 .mainSite{
@@ -556,7 +826,7 @@ animation: sizeUp 180s linear alternate infinite;
 
 
     .upload-container {
-    	margin-top: 10px;
+    	margin-top: 1rem;
       border: 3px dashed #a100ff;
       padding: 2rem;
       max-width: 100%;
@@ -693,232 +963,6 @@ animation: sizeUp 180s linear alternate infinite;
 
 /*    Drag and drop       */
 
-.art{
-	background-image: url('../images/showcase/art.png');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	filter: grayscale(100%) brightness(0.6);
-}
-
-.currents{
-	outline: 2px solid #08ffff;
-	padding: 0.8rem;
-	margin-top: 10px;
-  font-family: 'GohuFont', monospace;
-}
-
-.currents h5{
-	text-align: center;
-	color: #a100ff;
-	font-size: 1.3rem;
-}
-
-.currents h5 span{
-  text-align: center;
-  color: #f2a2ff;
-  font-size: 1rem;
-}
-
-.thoughts{
-	outline: 2px solid #08ffff;
-	margin-top: 10px;
-	padding: 0.8rem;
-	text-align: center;
-  font-family: 'GohuFont', monospace;
-}
-
-.thoughts h5{
-	text-align: center;
-	color: #a100ff;
-  font-size: 1.3rem;
-	line-height: 0;
-}
-
-.thoughts a{
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	color: #f2a2ff;
-  font-size: 1rem;
-	text-decoration: none;
-	text-align: center;
-}
-
-.thoughts a b{
-	font-size: 1.5rem;
-}
-
-#statuscafe {
-    background-color: transparent;
-    border: 1px solid midnightblue;
-    outline: 2px solid #08ffff;
-  margin-top: 10px;
-  padding: 0.8rem;
-  text-align: center;
-  font-family: 'GohuFont', monospace;
-}
-#statuscafe-username {
-    margin-bottom: .5em;
-    color: #a100ff;
-}
-
-#statuscafe-username a{
-  font-size: 1.3rem;
-  color: #a100ff;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-#statuscafe-content {
-    margin: 0 1em 0.5em 1em;
-    color: #f2a2ff;
-    font-weight: 1000;
-}
-
-.chattable{
-	outline: 2px solid #08ffff;
-	margin-top: 10px;
-	width: 100%;
-	height: 450px;
-}
-
-.increment{
-	margin-top: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.marqueesImgs{
-	margin-top: 10px;
-	outline: 2px solid #08ffff;
-	padding: 2px;
-	display: flex;
-  	align-items: center;
-  	height: 4rem;
-  	overflow: hidden;
-}
-
-.marqueesImgs marquee {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.marqueesImgs img {
-  display: inline-block;
-  vertical-align: middle;
-  height: 80%;
-  margin: 0 5px;
-}
-
-.socials{
-	margin-top: 10px;
-	outline: 2px solid #08ffff;
-	padding: 2px;
-	display: flex;
-  	align-items: center;
-  	justify-content: space-around;
-  	padding: 10px;
-  	flex-wrap: wrap;
-    font-family: 'GohuFont', monospace;
-}
-
-.socials h5{
-	margin: 0;
-	margin-bottom: 10px;
-	text-align: center;
-	color: white;
-	font-size: 1rem;
-	flex-basis: 100%
-}
-
-.socials a{
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.socialsIcons{
-	height: 2rem;
-	width: 2rem;
-}
-
-/*  Music Player   */
-
-    .player {
-      background-color: #000;
-  outline: 2px solid #0ff;
-  color: #0ff;
-  padding: 20px;
-  box-sizing: border-box;
-      width: 100%;
-      box-shadow: 0 0 15px #000;
-      font-family: 'GohuFont', monospace;
-    }
-    .marquee-text-track{
-      overflow: hidden;
-    }
-
-    .title {
-      margin-bottom: 10px;
-      font-size: 1.1em;
-      white-space: nowrap;
-    }
-    
-    .controls {
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .progress {
-      width: 100%;
-      height: 5px;
-      background: #444;
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 8px;
-      position: relative;
-    }
-
-    .progress-filled {
-      height: 100%;
-      background: #ff69b4;
-      width: 0%;
-      transition: width 0.2s;
-    }
-
-    .time {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8em;
-      margin-bottom: 10px;
-    }
-
-    .volume {
-      width: 100%;
-    }
-
-    .controls button {
-      background: #444;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .controls button:hover {
-      background: #666;
-    }
-
-
-/* Music Player */
-
-
-
-
 .guestbook{
   margin-top: 1rem;
   outline: 2px solid #08ffff;
@@ -932,6 +976,81 @@ animation: sizeUp 180s linear alternate infinite;
                      var(--sb-track-color);
   }
 }
+
+
+
+
+/*         ART.HTML          */
+
+.asciiTextArt{
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    position: absolute;
+    transform: translate(150%,-175%);
+    text-align: center;
+}
+
+.artSection{
+  outline: 2px solid #a100ff;
+  border-radius: 3px;
+  padding: 1rem;
+  background-color: black;
+  text-align: center;
+  color: #f2a2ff;
+  font-family: 'GohuFont', monospace;
+}
+
+.artSection h3{
+  font-size: 2rem;
+}
+
+.artSection a{
+  color: #a100ff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery img{
+  outline: 2px solid #f2a2ff; 
+  border-radius: 3px;
+  width: 100%;
+  height: auto;
+}
+
+.gallery video{
+  outline: 2px solid #f2a2ff; 
+  border-radius: 3px;
+}
+
+.span2{
+  grid-column: span 2;
+}
+
+.gallery_2{
+  display: grid;
+  gap: 1rem;
+}
+
+
+/*  ART.HTML ENDS                   */
+
 
 
 
@@ -949,10 +1068,10 @@ animation: sizeUp 180s linear alternate infinite;
 	.childBoxes h2{
 		font-size: 8vw;
 	}
-	header h3{
-		font-size: 4vw;
-	}
-	header h6{
-		font-size: 2vw;
-	}
+  header h3{
+    font-size: 4vw;
+  }
+  header h6{
+    font-size: 2vw;
+  }
 }
