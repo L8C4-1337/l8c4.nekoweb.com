@@ -193,6 +193,12 @@ header h6{
   color: #13ff00;
 }
 
+@media (max-width: 1400px){
+  .artTitle{
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 992px){
   header h3{
     font-size: 4vw;
@@ -469,7 +475,6 @@ main{
 section{
 	display: grid;
 	grid-template-columns: 25% 75%;
-/*	gap: 10px;*/
 }
 
 .mainSite{
@@ -484,15 +489,15 @@ section{
 }
 
 .asciiText{
-	background: #7F00FF;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #7F00FF;
+	background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+	background: linear-gradient(to right, #E100FF, #7F00FF);
 	-webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     text-align: center;
-    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    font-size: 0.6vw;
     position: absolute;
     transform: translate(25%,-175%);
     text-align: center;
@@ -641,9 +646,8 @@ section{
 }
 
 .childBoxesBG:hover{
-	background: black;  /* fallback for old browsers */
+	background: black;
 	background-image:  repeating-linear-gradient(0deg, rgba(0,131,176,0.5), rgba(0,180,219,0.5) 2px, black 2px, black);
-/*	background-image:  linear-gradient(rgba(0,131,176,0.5) 2px, transparent 2px), linear-gradient(to right, rgba(0,180,219,0.5) 2px, black 2px);*/
 	background-size: 10px 10px;
 	background-position: center;
 	opacity: 1;
@@ -662,7 +666,7 @@ section{
     background-position: 0 0;
   }
   100% {
-    background-position: 0px 360px; /* ajustá para velocidad/sensación */
+    background-position: 0px 360px;
   }
 }
 
@@ -671,7 +675,7 @@ section{
     background-position: 0 0;
   }
   100% {
-    background-position: 0px -360px; /* ajustá para velocidad/sensación */
+    background-position: 0px -360px;
   }
 }
 
@@ -699,8 +703,6 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 animation: sizeUp 180s linear alternate infinite;
- /* background-color: #7c0000;  optional dark bg */
-  	/*background-color: antiquewhite;*/
 }
 
 @keyframes sizeUp{
@@ -821,12 +823,6 @@ animation: sizeUp 180s linear alternate infinite;
   float: right;
   margin-left: 5px;
 }
-
-/*.collapsible:hover{
-      border: 2px solid #f2a2ff;
-      border-radius: 8px;
-      animation: glowing-border 1.5s ease-in-out infinite;
-}*/
 
 .active:after {
   content: "\2212";
@@ -991,15 +987,15 @@ animation: sizeUp 180s linear alternate infinite;
 /*         ART.HTML          */
 
 .asciiTextArt{
-  background: #7F00FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #7F00FF;
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  background: linear-gradient(to right, #E100FF, #7F00FF);
   -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     text-align: center;
-    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    font-size: 0.6vw;
     position: absolute;
     transform: translate(150%,-195%);
     text-align: center;
@@ -1063,15 +1059,15 @@ animation: sizeUp 180s linear alternate infinite;
 /*   RESOURCES.HTML                   */
 
 .asciiTextResources{
-    background: #7F00FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #7F00FF;
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  background: linear-gradient(to right, #E100FF, #7F00FF);
   -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     text-align: center;
-    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    font-size: 0.6vw;
     position: absolute;
     transform: translate(20%,-195%);
     text-align: center;
@@ -1099,15 +1095,15 @@ animation: sizeUp 180s linear alternate infinite;
 /*      PROJECTS.HTML STARTS */
 
   .asciiTextProjects{
-    background: #7F00FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #7F00FF;
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  background: linear-gradient(to right, #E100FF, #7F00FF);
   -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
     text-align: center;
-    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    font-size: 0.6vw;
     position: absolute;
     transform: translate(30%,-195%);
     text-align: center;
@@ -1159,10 +1155,4 @@ animation: sizeUp 180s linear alternate infinite;
 	.childBoxes h2{
 		font-size: 8vw;
 	}
-  header h3{
-    font-size: 4vw;
-  }
-  header h6{
-    font-size: 2vw;
-  }
 }

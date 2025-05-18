@@ -221,12 +221,6 @@ function scheduleSyncedUpdates() {
    	setTimeout(() => {
         updateCurrentlyListening();
         updateCurrentlyGaming();
-        //gamingCounter++;
-        // if (gamingCounter >= 5) {
-            
-        //     gamingCounter = 0;
-        // }
-
         scheduleSyncedUpdates();
     }, msToNextCall);
 }
