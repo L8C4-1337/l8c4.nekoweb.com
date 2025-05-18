@@ -18,7 +18,7 @@
 		<header id="header">
 			<a href="/homepage"><img src="../includes/images/favicon/icono.png"></a>
 			<h3>One could call this place home...</h3>
-			<h6>SYS STATUS: <span class="onlineText">ONLINE</span> <br> <span id = "currentDay">19/04/2025</span> <br> v0.0.1</h6>
+			<h6>SYS STATUS: <span class="onlineText">ONLINE</span> <br> <span id = "currentDay">19/04/2025</span> <br> v1.0.0</h6>
 		</header>
 		<section>
 			<div class="sideBar" id="sidebar">
@@ -40,12 +40,12 @@
 				</div>	
 
 				<div class="currents">
-					<h5 class="mood ">Mood: <br><a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-f2a2ff/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
+					<h5 class="mood">Mood: <br><a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-f2a2ff/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
 					<h5 id="currentlyListening">Currently listening to: <br><span>Loading...</span></h5>
-					<h5 class="">What I've been watching: <br><span>Merlí</span></h5>
-					<h5 class="">What I've been playing: <br><span>None</span></h5>
-					<h5 class="">Last game played: <br><span>Alicemare</span></h5>
-					<h5 class="">Song of the moment: <br><span>The Boy with the Thorn in His Side - The Smiths</span></h5>
+					<h5>What I've been watching: <br><span>Merlí</span></h5>
+					<h5 id="currentlyGaming">Currently playing: <br><span>Loading...</span></h5>
+					<h5 id="lastPlayed">Last game played: <br><span>Loading...</span></h5>
+					<!-- <h5 class="">Song of the moment: <br><span>The Boy with the Thorn in His Side - The Smiths</span></h5> -->
 				</div>
 
 				<div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=l8c4" defer></script>
@@ -104,37 +104,37 @@
                                                                                                                  
 				</pre>
 				<div class="containerSection">
-					<a href="#" class="childBoxes">
+					<!-- <a href="#" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGDown"></div>
 						<h2 class="glitch" data-text="About">About</h2>
-					</a>
+					</a> -->
 					<a href="https://l8c4.bearblog.dev/" target="_blank" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Blog">Blog</h2>
 					</a>
-					<a href="#" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGDown"></div>
-						<h2 class="glitch" data-text="Projects">Projects</h2>
-					</a>
-					<a href="https://l8c4.bearblog.dev/opinions" target="_blank" class="childBoxes">
+					<!-- <a href="https://l8c4.bearblog.dev/opinions" target="_blank" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Opinions">Opinions</h2>
 					</a>
 					<a href="https://l8c4.bearblog.dev/guides" target="_blank" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGDown"></div>
 						<h2 class="glitch" data-text="Guides">Guides</h2>
-					</a>
+					</a> -->
 					<a href="../art/" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Art">Art</h2>
 					</a>
-					<a href="#" class="childBoxes">
+					<a href="../resources/" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGDown"></div>
 						<h2 class="glitch" data-text="Resources">Resources</h2>
 					</a>
-					<a href="#" class="childBoxes">
+					<!-- <a href="#" class="childBoxes">
 						<div class="childBoxesBG childBoxesBGUp"></div>
 						<h2 class="glitch" data-text="Random">Random</h2>
+					</a> -->
+					<a href="../projects/" class="childBoxes">
+						<div class="childBoxesBG childBoxesBGDown"></div>
+						<h2 class="glitch" data-text="Projects">Projects</h2>
 					</a>
 				</div>
 
@@ -272,11 +272,33 @@
 
 	updateCurrentlyListening();
 
+	function updateCurrentlyGaming(){
+		fetch('https://424241.xyz/getNowGaming.php')
+	  .then(response => response.json())
+	  .then(data => {
+	    const element = document.getElementById('currentlyGaming');
+	    const lastPlayed = document.getElementById('lastPlayed');
+	    if (data.status === -1) {
+	      element.innerHTML = "Currently playing: <br><span>Nothing</span>";
+	    } else {
+	      element.innerHTML = `Currently playing: <br><a href="https://store.steampowered.com/app/${data.appid}" target="_blank" rel="norefereer">${data.game}</a>`;
+	    }
+	    lastPlayed.innerHTML = `Last game played: <br><a href="https://store.steampowered.com/app/${data.appid}" target="_blank" rel="norefereer">${data.game}</a>`;
+	  })
+	  .catch(error => {
+	    console.error("Error fetching now playing info:", error);
+	  });	
+	}
+
+	updateCurrentlyGaming();
+
+//let gamingCounter = 0;
+
 function scheduleSyncedUpdates() {
     const now = new Date();
     const seconds = now.getSeconds();
     const milliseconds = now.getMilliseconds();
-    
+
     let msToNextCall;
 
     if (seconds < 5) {
@@ -287,11 +309,17 @@ function scheduleSyncedUpdates() {
 
     setTimeout(() => {
         updateCurrentlyListening();
+        updateCurrentlyGaming();
+        //gamingCounter++;
+        // if (gamingCounter >= 5) {
+            
+        //     gamingCounter = 0;
+        // }
 
-        // Then call it every 60 seconds from that point on
-        setInterval(updateCurrentlyListening, 60 * 1000);
+        scheduleSyncedUpdates();
     }, msToNextCall);
 }
+
 
 	scheduleSyncedUpdates();
 

@@ -280,6 +280,14 @@ header h6{
   font-size: 1rem;
 }
 
+.currents h5 a{
+  text-align: center;
+  color: #f2a2ff;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: 800;
+}
+
 #statuscafe {
     background-color: transparent;
     border: 1px solid midnightblue;
@@ -993,7 +1001,7 @@ animation: sizeUp 180s linear alternate infinite;
     text-align: center;
     font-size: 0.6vw; /* mínimo, adaptable, máximo */
     position: absolute;
-    transform: translate(150%,-175%);
+    transform: translate(150%,-195%);
     text-align: center;
 }
 
@@ -1051,6 +1059,89 @@ animation: sizeUp 180s linear alternate infinite;
 
 /*  ART.HTML ENDS                   */
 
+
+/*   RESOURCES.HTML                   */
+
+.asciiTextResources{
+    background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    position: absolute;
+    transform: translate(20%,-195%);
+    text-align: center;
+}
+
+.resourcesSection{
+  text-align: left;
+}
+
+.resourcesSection h3{
+  text-align: center;
+}
+
+.resourcesSection li {
+    margin-top: 1rem;
+}
+    
+.resourcesSection li:first-child {
+    margin-top:0;
+}
+
+
+/*        RESOURCES.HTML ENDS                  */
+
+/*      PROJECTS.HTML STARTS */
+
+  .asciiTextProjects{
+    background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    font-size: 0.6vw; /* mínimo, adaptable, máximo */
+    position: absolute;
+    transform: translate(30%,-195%);
+    text-align: center;
+}
+
+.projectsSection img{
+  outline: 2px solid #f2a2ff; 
+  border-radius: 3px;
+  width: 100%;
+  height: auto;
+}
+
+.content {
+      padding: 2rem;
+    }
+
+    #mirror {
+      outline: 2px solid #f2a2ff;
+      border-radius: 3px;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background-color: #000;
+      background-size: cover;
+      background-position: center;
+      margin-top: 2rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+/* PROJECTS.HTML ENDS  */
 
 
 
