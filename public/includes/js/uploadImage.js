@@ -1,6 +1,6 @@
 
 function appendTextToFile(text) {
-	fetch('https://424241.xyz/appendLink.php', {
+	fetch('https://gdsongverifier.alwaysdata.net/appendLink.php', {
 		method: 'POST',
 		body: new URLSearchParams({
 			'text': text
@@ -109,7 +109,7 @@ function uploadFile(file) {
 	formData.append("reqtype", "fileupload");
 formData.append("time", "72h"); // You can change to 12h, 24h, etc.
 formData.append("file", file);
-xhr.open("POST", "https://424241.xyz/litterbox-upload.php", true);
+xhr.open("POST", "https://gdsongverifier.alwaysdata.net/litterbox-upload.php", true);
 
 xhr.upload.addEventListener("progress", (e) => {
 	if (e.lengthComputable) {
