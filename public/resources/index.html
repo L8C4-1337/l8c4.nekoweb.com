@@ -17,7 +17,7 @@
 	<div class="screenShadow"></div>
 	<main>
 		<header id="header">
-			<a href="/homepage/"><img src="../includes/images/favicon/icono.png"></a>
+			<a href="../homepage/"><img src="../includes/images/favicon/icono.png"></a>
 			<h3>For you, for me and for everyone</h3>
 			<h6>SYS STATUS: <span class="onlineText">ONLINE</span> <br> <span id = "currentDay">19/04/2025</span> <br> v1.0.0</h6>
 		</header>
@@ -257,7 +257,7 @@
 	// get currently song being listened
 
 	function updateCurrentlyListening(){
-		fetch('https://424241.xyz/getNowPlaying.php')
+		fetch('https://gdsongverifier.alwaysdata.net/getNowPlaying.php')
 	  .then(response => response.json())
 	  .then(data => {
 	    const element = document.getElementById('currentlyListening');
@@ -275,7 +275,7 @@
 	updateCurrentlyListening();
 
 	function updateCurrentlyGaming(){
-		fetch('https://424241.xyz/getNowGaming.php')
+		fetch('https://gdsongverifier.alwaysdata.net/getNowGaming.php')
 	  .then(response => response.json())
 	  .then(data => {
 	    const element = document.getElementById('currentlyGaming');

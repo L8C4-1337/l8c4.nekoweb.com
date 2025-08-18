@@ -1116,28 +1116,26 @@ animation: sizeUp 180s linear alternate infinite;
   height: auto;
 }
 
-.content {
-      padding: 2rem;
-    }
-
-    #mirror {
-      outline: 2px solid #f2a2ff;
-      border-radius: 3px;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      background-color: #000;
-      background-size: cover;
-      background-position: center;
-      margin-top: 2rem;
-    }
-
-    button {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
-
 /* PROJECTS.HTML ENDS  */
+
+/* BLOG.HTML STARTS */
+
+.asciiTextBlog{
+  background: #7F00FF;
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+  background: linear-gradient(to right, #E100FF, #7F00FF);
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    font-size: 0.6vw;
+    position: absolute;
+    transform: translate(100%,-195%);
+    text-align: center;
+}
+
+/* BLOG.HTML ENDS */
 
 
 
