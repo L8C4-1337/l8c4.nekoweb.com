@@ -6,9 +6,9 @@ function appendTextToFile(text) {
 			'text': text
 		})
 	})
-	.then(response => response.json())
+	.then(response => response.text())
 	.then(data => {
-		//console.log(data.message);
+		//console.log(data);
 	})
 	.catch(error => {
 		console.error('Error:', error);
