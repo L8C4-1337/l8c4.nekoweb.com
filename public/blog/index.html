@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>L8C4 | Homepage</title>
+	<title>L8C4 | Blog</title>
 	<link rel="stylesheet" type="text/css" href="../includes/css/homepage_style.css">
 	<link rel="icon" type="image/png" href="../includes/images/favicon/favicon-96x96.png" sizes="96x96" />
 	<link rel="icon" type="image/svg+xml" href="../includes/images/favicon/favicon.svg" />
@@ -11,13 +11,14 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="../includes/images/favicon/apple-touch-icon.png" />
 	<link rel="manifest" href="../includes/images/favicon/site.webmanifest" />
 <script src="https://iframe.chat/scripts/main.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/player.style/notflix/+esm"></script>
 </head>
 <body>
 	<div class="screenShadow"></div>
 	<main>
 		<header id="header">
-			<a href="/homepage"><img src="../includes/images/favicon/icono.png"></a>
-			<h3>One could call this place home...</h3>
+			<a href="../homepage/"><img src="../includes/images/favicon/icono.png"></a>
+			<h3 class="artTitle">Irrelevant logs about my life</h3>
 			<h6>SYS STATUS: <span class="onlineText">ONLINE</span> <br> <span id = "currentDay">19/04/2025</span> <br> v1.0.0</h6>
 		</header>
 		<section>
@@ -40,9 +41,9 @@
 				</div>	
 
 				<div class="currents">
-					<h5 class="mood">Mood: <br><a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-f2a2ff/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
+					<h5 class="mood ">Mood: <br><a href="https://www.imood.com/users/l8c4"><img src="https://moods.imood.com/display/uname-l8c4/fg-000000/bg-f2a2ff/imood.gif" alt="The current mood of l8c4 at www.imood.com" border="0"></a></a></h5>
 					<h5 id="currentlyListening">Currently listening to: <br><span>Loading...</span></h5>
-					<h5>What I've been watching: <br><span>Merlí</span></h5>
+					<h5 class="">What I've been watching: <br><span>Merlí</span></h5>
 					<h5 id="currentlyGaming">Currently playing: <br><span>Loading...</span></h5>
 					<h5 id="lastPlayed">Last game played: <br><span>Loading...</span></h5>
 					<!-- <h5 class="">Song of the moment: <br><span>The Boy with the Thorn in His Side - The Smiths</span></h5> -->
@@ -92,95 +93,50 @@
 			</div>
 			<div class="mainSite">
 				<img src="../includes/images/showcase/kaworu1.png">
-				<pre class="asciiText">
-░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓████████▓▒░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓████████▓▒░ 
-░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░        
-░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░ ░▒▓███████▓▒░░▒▓████████▓▒░▒▓█▓▒▒▓███▓▒░▒▓██████▓▒░   
-░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
-░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓████████▓▒░ 
-                                                                                                                 
-                                                                                                                 
-				</pre>
-				<div class="containerSection">
-					<!-- <a href="#" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGDown"></div>
-						<h2 class="glitch" data-text="About">About</h2>
-					</a> -->
-					<a href="../blog/" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGUp"></div>
-						<h2 class="glitch" data-text="Blog">Blog</h2>
-					</a>
-					<!-- <a href="https://l8c4.bearblog.dev/opinions" target="_blank" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGUp"></div>
-						<h2 class="glitch" data-text="Opinions">Opinions</h2>
-					</a>
-					<a href="https://l8c4.bearblog.dev/guides" target="_blank" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGDown"></div>
-						<h2 class="glitch" data-text="Guides">Guides</h2>
-					</a> -->
-					<a href="../art/" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGUp"></div>
-						<h2 class="glitch" data-text="Art">Art</h2>
-					</a>
-					<a href="../resources/" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGDown"></div>
-						<h2 class="glitch" data-text="Resources">Resources</h2>
-					</a>
-					<!-- <a href="#" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGUp"></div>
-						<h2 class="glitch" data-text="Random">Random</h2>
-					</a> -->
-					<a href="../projects/" class="childBoxes">
-						<div class="childBoxesBG childBoxesBGDown"></div>
-						<h2 class="glitch" data-text="Projects">Projects</h2>
-					</a>
-				</div>
+				<pre class="asciiTextBlog">░▒▓███████▓▒░░▒▓█▓▒░      ░▒▓██████▓▒░ ░▒▓██████▓▒░  
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░        
+░▒▓███████▓▒░░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒▒▓███▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░     ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
+░▒▓███████▓▒░░▒▓████████▓▒░▒▓██████▓▒░ ░▒▓██████▓▒░  
+                                                     
+                                                     </pre>
 
-				<div class="milkPics">
-					<div class="pics" id="galleryPics">
-						<img loading="lazy" src="https://files.catbox.moe/qn79n8.png">
-						<img loading="lazy" src="https://files.catbox.moe/8prxgr.png">
-						<img loading="lazy" src="https://files.catbox.moe/4m4esr.png">
-						<img loading="lazy" src="https://files.catbox.moe/6edodv.png">
-						<img loading="lazy" src="https://files.catbox.moe/9mzq4z.webp">
-						<img loading="lazy" src="https://files.catbox.moe/ramuuq.jpg">
-						<img loading="lazy" src="https://files.catbox.moe/mmg0xy.png">
-						<img loading="lazy" src="https://files.catbox.moe/rzry60.jpg">
-						<img loading="lazy" src="https://files.catbox.moe/lu3j3f.jpg">
-						<img loading="lazy" src="https://files.catbox.moe/pomary.jpg">
-						<img loading="lazy" src="https://files.catbox.moe/g7gvpf.png">
-						<img loading="lazy" src="https://files.catbox.moe/yihuun.png">
-						<img loading="lazy" src="https://files.catbox.moe/ng09fr.png">
-					</div>
-				</div>
-				
-				 <div class="upload-container">
-				 	<h5>Want to upload something to the gallery?</h5>
-				 	<button class = "collapsible" id="collapsible">Open upload area</button>
-				 	<div class="collapsingBox">
-					 	<div id="dropArea">
-						 	<p id = "clickableText">Drop your image here or click to select. Everything uploaded will be validated by me. By uploading you agree with the <a target="_blank" rel="noopener noreferrer" id = "clickableText" class="TOSCatbox" href="https://catbox.moe/legal.php">TOS of Catbox.</a></p>
-						    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
-						    <div class="preview" id="preview"></div>
-						    <div class="progress-bar"><div class="progress-bar-fill" id="progressFill"></div></div>
-						    <div class="file-path" id="filePathDisplay"></div>		    
-					 	</div>
-					 	  <button id="uploadButton" class="uploadButton"><span>Upload Image</span></button>	
-				 	</div>
-				 	
-				  </div>
+	<div class="artSection resourcesSection">
+		<p>Welcome to my blog! Here I write about random stuff going through opinions, recommendations, guides, thoughts, etc. But I mostly log my days in university, including a video montage of me studying with a song I like. The video is run through the milk-filter, partly as aesthetic and partly to keep me anonymous (doesn't really do a great job at that but oh well, just say yes it does).
 
-				  <div class="guestbook">
-				  	<iframe src="https://l8c4.atabook.org/" width="100%" height="450" frameborder='none'></iframe>
-				  </div>
-			</div>
+<h3>About me</h3>
+<p>I'll like to keep my identity secret, so I won't give much personal information. Of course my intention isn't to go to such an extreme of writing like out of the [SCP wiki](tab:https://scp-wiki.wikidot.com/), so I'll try to keep it balanced.<br>
+Nonetheless, some generic stuff I can say about me are:</p>
+
+<ul>
+	<li>I'm in university, doing an engineering degree.</li>
+	<li>In those sporadic moments where I can be organised, I go to the gym (more often than not!).</li>
+	<li>Related to previous point, trying to learn a new language (dropped, no time :d).</li>
+	<li>I'm unorganised (becoming better!).</li>
+	<li>I have a lifelong dream of contributing to society, in any way (positive of course).</li>
+</ul>
+
+<p>And some of my interests in no particular order are:</p>
+<ul>
+	<li>Tinkering with tech stuff.</li>
+	<li>Solving problems no one has.</li>
+	<li>Indie videogames.</li>
+	<li>Collecting memories in any shape or form.</li>
+	<li>Playing/watching football.</li>
+</ul>
+<p>Hopefully you enjoy what I write here! I'm always open to comments, suggestions and more, and that's why I'll always leave a comment section in each post as a way to interact, which is what in the ends this is all for in my case.<br></p>
+<h3>Posts</h3>
+		<ul>
+			<li><a href="18-08-2025/">18-08-2025 - A log about my day in the 18/08/2025.</li>
+			<li><a href="14-08-2025/">14-08-2025 - A log about my day in the 14/08/2025.</li>
+		</ul>
+	</div>
 		</section>
 	</main>
 </body>
 <script src = "../includes/js/musicPlayer.js"></script>
-<script src = "../includes/js/uploadImage.js"></script>
 <script type="text/javascript">
 
 	// Sidebar height
@@ -217,39 +173,12 @@
 	
 
 	document.addEventListener("DOMContentLoaded", () => {
-
-	//Shuffle pics
-	var containerPics = document.getElementById('galleryPics');
-    shuffleElements(containerPics);
-
     // Shuffle marquees
 
     var containerMarquees = document.getElementById('containerMarquees');
     shuffleElements(containerMarquees);
-
-
-    // Add animation to pics
-    const images = document.querySelectorAll(".pics img");
-    images.forEach((img, index) => {
-      img.style.animationDelay = `${index * 100}ms`;
-      img.classList.add("fade-in");
-    });
   });
 
-
-	// Collapsible for uploading imgs
-
-	var coll = document.getElementById("collapsible");
-
-	coll.addEventListener("click",function(){
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.maxHeight){
-      		content.style.maxHeight = null;
-    	} else {
-      		content.style.maxHeight = content.scrollHeight + "px";
-    	}
-	});
 
 	// get currently song being listened
 
@@ -291,13 +220,11 @@
 
 	updateCurrentlyGaming();
 
-//let gamingCounter = 0;
-
 function scheduleSyncedUpdates() {
     const now = new Date();
     const seconds = now.getSeconds();
     const milliseconds = now.getMilliseconds();
-
+    
     let msToNextCall;
 
     if (seconds < 5) {
@@ -306,7 +233,7 @@ function scheduleSyncedUpdates() {
         msToNextCall = ((60 - seconds + 5) * 1000) - milliseconds;
     }
 
-    setTimeout(() => {
+   	setTimeout(() => {
         updateCurrentlyListening();
         updateCurrentlyGaming();
         //gamingCounter++;
@@ -318,7 +245,6 @@ function scheduleSyncedUpdates() {
         scheduleSyncedUpdates();
     }, msToNextCall);
 }
-
 
 	scheduleSyncedUpdates();
 
