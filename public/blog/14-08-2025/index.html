@@ -195,7 +195,7 @@ Shoot me an email here!: l8c4.1337@gmail.com</p>
 	    if (data === -1) {
 	      element.innerHTML = "Currently listening to: <br><span>Nothing</span>";
 	    } else {
-	      element.innerHTML = `Currently listening to: <br><span>${data.title} - ${data.artist}</span>`;
+	      element.innerHTML = `Currently listening to: <a href="${data.url}" target="_blank"><br><span>${data.title} - ${data.artist}</span></a>`;
 	    }
 	  })
 	  .catch(error => {
