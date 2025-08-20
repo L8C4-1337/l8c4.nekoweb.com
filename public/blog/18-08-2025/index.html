@@ -107,17 +107,9 @@
 		<h3>18/08/2025</h3>
 		<p>Really chill day. I went to Probability and Statistics (PyE) theory and practice class, studied in my own PyE, watched the theory class of Vector Calculus (CV) and the theory class of Introduction to Differential Equations (IED). Also made the blog section of this site, and finally put this site public! It was time. Here is the montage of me studying PyE today:
 			<br><br>
-			<media-theme-notflix
-						  style="--media-primary-color: #f2a2ff; --media-secondary-color: #f2a2ff; --media-accent-color: #08ffff; width: 100%; display: block;">
-						  <video
-						    slot="media"
-						    src="https://l8c4-cdn.b-cdn.net/2025-08-18_audio.mp4"
-						    playsinline
-						    crossorigin="anonymous"
-						    style="width:100%; height:auto; display:block;"
-						    preload="metadata"
-						  ></video>
-			</media-theme-notflix>
+			<div id="yt-container" class="video-container">
+    		<img src="https://i.ytimg.com/vi/jy2osuE-Abs/maxresdefault.jpg" alt="Video preview">
+    	<div class="play-button">▶</div>
 			<br>
 <p>Song: In the Aeroplane Over the Sea - Neutral Milk Hotel</p>			
 <br><br>
@@ -247,6 +239,11 @@ function scheduleSyncedUpdates() {
 }
 
 	scheduleSyncedUpdates();
+
+	document.getElementById("yt-container").addEventListener("click", function() {
+      this.innerHTML = '<iframe class="ytframe" src="https://www.youtube.com/embed/jy2osuE-Abs?autoplay=1&rel=0&modestbranding=1" ' +
+                       'allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    });
 
 </script>
 </html>
