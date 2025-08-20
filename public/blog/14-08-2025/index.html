@@ -109,19 +109,10 @@
 Nonetheless, I did go to the theory class, which was honestly pretty good, compared to the lackluster previous one.
 Quick note to say I'm writing this log 4 days later, so I don't really remember what I did that day. But I do know that at some point I went to the library to study and so some practice. I was like 2 hours, even though the last 30 minutes weren't very productive as I started to get very distracted. Here below is a montage of me studying:
 <br><br>
-
-
-<media-theme-notflix
-						  style="--media-primary-color: #f2a2ff; --media-secondary-color: #f2a2ff; --media-accent-color: #08ffff; width: 100%; display: block;">
-						  <video
-						    slot="media"
-						    src="https://l8c4-cdn.b-cdn.net/2025-08-14_audio.mp4"
-						    playsinline
-						    crossorigin="anonymous"
-						    style="width:100%; height:auto; display:block;"
-						    preload="metadata"
-						  ></video>
-			</media-theme-notflix>
+			<div id="yt-container" class="video-container">
+    		<img src="https://i.ytimg.com/vi/bsaTCrjyUog/maxresdefault.jpg" alt="Video preview">
+    	<div class="play-button">▶</div>
+  </div>
 						<br>
 <p>Song: Hug - Weatherday</p>			
 
@@ -261,6 +252,11 @@ function scheduleSyncedUpdates() {
 }
 
 	scheduleSyncedUpdates();
+
+	document.getElementById("yt-container").addEventListener("click", function() {
+      this.innerHTML = '<iframe class="ytframe" src="https://www.youtube.com/embed/bsaTCrjyUog?autoplay=1&rel=0&modestbranding=1" ' +
+                       'allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+    });
 
 </script>
 </html>
