@@ -40,8 +40,9 @@ body {
 
 .mainText a{
   font-size: 3rem;
-  color: white;
-  text-decoration: none;
+  color: #a100ff;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .mainText h4 {
